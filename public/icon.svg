@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c2410c" />
+      <stop offset="35%" stop-color="#ea580c" />
+      <stop offset="70%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#orangeGrad)" />
+
+  <!-- Inner ambient light ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#ffffff" stroke-width="4" stroke-opacity="0.2" />
+
+  <!-- Central Target / Goal Emblem -->
+  <g filter="url(#glow)">
+    <!-- Outer Focus Ring with 4 cardinal notches -->
+    <circle cx="256" cy="256" r="130" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-dasharray="160 40 160 40" />
+
+    <!-- Secondary Focus Orbit -->
+    <circle cx="256" cy="256" r="84" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="8" />
+
+    <!-- Central North Arrow / Goal Star -->
+    <path d="M256 160 L288 236 L364 256 L288 276 L256 352 L224 276 L148 256 L224 236 Z" fill="#ffffff" />
+    <circle cx="256" cy="256" r="14" fill="#ea580c" />
+  </g>
+</svg>
